@@ -14,9 +14,9 @@ import streamlit as st
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from utils.ab_calculator import ABCalculator
 from utils.plots_ab import ABPlotter
+from utils.font_setup import setup_chinese_font
 
-plt.rcParams['font.sans-serif'] = ['SimHei', 'Microsoft YaHei']
-plt.rcParams['axes.unicode_minus'] = False
+setup_chinese_font()
 
 
 def render_hypothesis_test():

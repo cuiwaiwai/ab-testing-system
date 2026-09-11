@@ -14,10 +14,11 @@ import plotly.graph_objects as go
 import plotly.express as px
 from typing import List, Optional, Dict, Any, Tuple
 
-# 中文字体
-plt.rcParams["font.sans-serif"] = ["SimHei", "Microsoft YaHei"]
-plt.rcParams["axes.unicode_minus"] = False
+# 中文字体（自动适配 Windows / Linux 云端服务器）
+from utils.font_setup import setup_chinese_font
+
 sns.set_style("whitegrid")
+setup_chinese_font()
 
 
 def _get_theme_colors():
